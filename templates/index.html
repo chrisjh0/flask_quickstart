@@ -3,13 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>MoneyMaker Enhanced</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Hello World!</h1>
+        <div class="top-header">
+            <div class="title">
+                <div class="logo-img">💰</div>
+                <h1>MONEY MAKER</h1>
+            </div>
+            <p class="author">BY: CHRISTOPHER HO</p>
+            <div class="prestige-info" id="prestige-display">PRESTIGE LV:0 MULT:1.0X</div>
+        </div>
+
+        <div class="header-buttons">
+            <button id="click-button" class="active">CLICK</button>
+            <button id="casino-button">CASINO</button>
+            <button id="upgrade-button">UPGRADE</button>
+            <button id="achievements-button">TROPHY</button>
+            <button id="prestige-button">PRESTIGE</button>
+        </div>
+
+        <div class="main-content">
+            <div class="panel active" id="click-panel">
+                <div class="panel-title"><h2>CLICKER</h2></div>
+                <div class="money-display" id="money-display">$0.00</div>
+                <div id="click-bag">💰</div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-label">PER CLICK</div>
+                        <div class="stat-value" id="per-click">$1.00</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">PER SECOND</div>
+                        <div class="stat-value" id="per-second">$0.00</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">TOTAL EARNED</div>
+                        <div class="stat-value" id="total-earned">$0.00</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">TOTAL CLICKS</div>
+                        <div class="stat-value" id="total-clicks">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel" id="casino-panel">
+                <div class="panel-title"><h2>LUCKY SLOTS</h2></div>
+                <div class="slot-machine">
+                    <div class="slot" id="slot-1">7</div>
+                    <div class="slot" id="slot-2">7</div>
+                    <div class="slot" id="slot-3">7</div>
+                </div>
+                <div class="betting-section">
+                    <input type="number" id="bet-input" placeholder="BET">
+                    <button id="spin-button">SPIN</button>
+                </div>
+                <div style="text-align: center; margin: 20px 0; color: #8bac0f; font-size: 7px; line-height: 1.6;">
+                    <p>MATCH 3: 15X</p>
+                    <p>THREE 7S: 50X</p>
+                    <p>MATCH 2: 3X</p>
+                </div>
+                <div class="betting-stats">
+                    <div class="betting-stat">
+                        <div>TOTAL BETS</div>
+                        <div id="total-bets">0</div>
+                    </div>
+                    <div class="betting-stat">
+                        <div>WINS</div>
+                        <div id="total-wins">$0.00</div>
+                    </div>
+                    <div class="betting-stat">
+                        <div>LOSSES</div>
+                        <div id="total-losses">$0.00</div>
+                    </div>
+                    <div class="betting-stat">
+                        <div>NET PROFIT</div>
+                        <div id="net-profit">$0.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel" id="upgrades-panel">
+                <div class="panel-title"><h2>UPGRADES</h2></div>
+                <div class="upgrade-container" id="upgrade-container"></div>
+            </div>
+
+            <div class="panel" id="achievements-panel">
+                <div class="panel-title"><h2>ACHIEVEMENTS</h2></div>
+                <div class="achievement-grid" id="achievement-grid"></div>
+            </div>
+
+            <div class="panel" id="prestige-panel">
+                <div class="panel-title"><h2>PRESTIGE SYSTEM</h2></div>
+                <div class="prestige-panel">
+                    <p style="color: #8bac0f; margin: 20px 0; font-size: 8px; line-height: 1.8;">RESET PROGRESS FOR PERMANENT MULTIPLIERS</p>
+                    <div class="prestige-benefit">
+                        <h3>CURRENT BENEFITS</h3>
+                        <p style="margin-top: 10px;">MULTIPLIER: <span id="current-multiplier">1.0X</span></p>
+                        <p>POINTS: <span id="prestige-points">0</span></p>
+                    </div>
+                    <div class="prestige-benefit">
+                        <h3>NEXT PRESTIGE</h3>
+                        <p style="margin-top: 10px;">REQUIRES: $<span id="prestige-requirement">1,000,000</span></p>
+                        <p>GRANT: +0.1X MULTIPLIER</p>
+                    </div>
+                    <button class="prestige-button" id="do-prestige">PRESTIGE NOW</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
 </html>
