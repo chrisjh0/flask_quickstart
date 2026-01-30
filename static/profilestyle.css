@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFCF8;
+  margin: 0;
+  padding: 0;
+}
+
+
+.resume header {
+  height: 300px;
+  width: 100%;
+  background-image: url("https://public-files.gumroad.com/jeyg164pnn068tte4ghbalncl8lj");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  gap: 20px;
+  margin-top: -75px;
+}
+.info .profile-img img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  margin: auto;
+}
+.info .logos img {
+  width: 35px;
+  height: 35px;
+  border-radius: 10%;
+  border: 2px solid white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  margin: auto;
+}
+.info h1 {
+  margin: 0;
+}
+.info p {
+  margin: 0;
+
+
+}
+.text-boxes {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+}
+.single-box {
+  padding: 30px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 24px;
+}
+p {
+  font-size: 16px;
+}
+
+

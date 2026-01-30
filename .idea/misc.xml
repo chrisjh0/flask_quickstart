@@ -3,8 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.9 (flask_quickstart-2)" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="1e20d399-5527-428b-b838-a2ff210c00ce" />
-  </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (flask_quickstart-2)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.14 (flask_quickstart-2)" project-jdk-type="Python SDK" />
 </project>
